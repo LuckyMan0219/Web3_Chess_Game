@@ -238,6 +238,11 @@ export const Connect = () => {
 
 
   const nextStage = async () => {
+    if (!window.ethereum || !window.ethereum.isMetaMask) {
+      window.open('https://metamask.io/download.html', '_blank');
+      setLoading(false);
+      return;
+    }
     if (loading) return;
     setLoading(true)
     switch (stage) {

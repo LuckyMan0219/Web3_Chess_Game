@@ -15,7 +15,8 @@ export default class Ranking extends Component {
   componentDidMount() {
     axios
       .post(
-        `http://${window.location.hostname}:${socketServerPort}/api/rankAll`
+        // `http://${window.location.hostname}:${socketServerPort}/api/rankAll`
+        `http://https://web3-chess-game-7ixt.vercel.app//api/rankAll`
       )
       .then((res) => {
         let rankData = [...res.data.rankData];
