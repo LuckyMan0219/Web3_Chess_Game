@@ -3,7 +3,7 @@ import React from 'react';
 import { ethers } from 'ethers'
 import {chainId} from './address';
 
-require("dotenv").config()
+// Do not use dotenv in the browser bundle. Use REACT_APP_* env vars at build time instead.
 // const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY
 // const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 // const web3 = createAlchemyWeb3(alchemyKey)
